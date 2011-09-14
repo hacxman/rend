@@ -1,5 +1,7 @@
 #!/usr/bin/ruby
 
+$: << File.expand_path(File.dirname(__FILE__) + '/../lib')
+
 require 'rubygems'
 require 'chunky_png'
 
