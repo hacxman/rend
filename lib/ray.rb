@@ -1,6 +1,6 @@
 module Rend
   class Ray
-    attr_accessor :pos, :vec
+    attr_accessor :pos, :vec, :picture_pos
 
     def initialize(p, v)
       @pos = p
