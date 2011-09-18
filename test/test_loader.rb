@@ -1,5 +1,6 @@
 require 'test/unit'
 require 'lib/loader'
+require 'test/helpers'
 
 class SceneLoaderTest < Test::Unit::TestCase
   def setup
@@ -22,21 +23,5 @@ class SceneLoaderTest < Test::Unit::TestCase
     assert_same_data s['s0'],   sp0
   end
 
-  def cmp_instance i1, i2
-    i1.instance_variables.each do |var|
-      v1 = i1.instance_variable_get var
-      v2 = i2.instance_variable_get var
-
-      v1 == v2
-    end.reduce {|a,b| a and b}
-  end
-
-  def assert_same_data i1, i2
-    unless cmp_instance i1, i2
-      assert_equal i1, i2
-    else
-      assert true
-    end
-  end
 
 end
